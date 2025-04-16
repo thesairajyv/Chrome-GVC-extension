@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Quick GVC Calendar Event",
+  "version": "1.0",
+  "description": "Create Google Calendar events with GVC link in one click",
+  "permissions": [
+    "identity",
+    "identity.email",
+    "clipboardWrite",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.googleapis.com/"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "oauth2": {
+    "client_id": "REPLACE_WITH_YOUR_ACTUAL_CLIENT_ID.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar",
+      "https://www.googleapis.com/auth/calendar.events"
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
