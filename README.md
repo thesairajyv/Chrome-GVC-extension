@@ -32,12 +32,13 @@ A Chrome extension that creates Google Calendar events with Google Meet links in
 
 1. After loading the extension, you'll see its icon in the Chrome toolbar
 2. Click the extension icon to open the popup
-3. Click 'Create CxCall Event' button
-4. If this is your first time:
+3. Enter a call number in the input field (e.g., "123" for CxCall-123)
+4. Click 'Create CxCall Event' button
+5. If this is your first time:
    - You'll be prompted to sign in with your Google account
    - Grant the necessary permissions when prompted
-5. The extension will:
-   - Create a 30-minute calendar event titled 'CxCall'
+6. The extension will:
+   - Create a 30-minute calendar event titled 'CxCall-[number]'
    - Generate a Google Meet link
    - Copy the Meet link to your clipboard
    - Show a success message

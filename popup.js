@@ -2,6 +2,14 @@ document.getElementById('createEvent').addEventListener('click', createCalendarE
 
 async function createCalendarEvent() {
   const statusElement = document.getElementById('status');
+  const callNumberInput = document.getElementById('callNumber');
+  const callNumber = callNumberInput.value;
+
+  if (!callNumber) {
+    statusElement.textContent = 'Please enter a call number';
+    return;
+  }
+
   statusElement.textContent = 'Creating event...';
 
   try {
@@ -13,7 +21,7 @@ async function createCalendarEvent() {
 
     // Create event with GVC link
     const event = {
-      summary: 'CxCall',
+      summary: `CxCall-${callNumber}`,
       start: {
         dateTime: new Date().toISOString(),
         timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
