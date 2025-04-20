@@ -37,6 +37,23 @@
 <body>
   <div class="container">
     <input type="number" id="callNumber" placeholder="Enter call number" min="1" required>
+    <!-- Duration selection radio buttons -->
+    <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%;">
+      <label style="font-size:13px; margin-bottom: 5px;">Duration (optional):</label>
+      <div>
+        <input type="radio" id="dur1" name="duration" value="60">
+        <label for="dur1">1 hour</label>
+      </div>
+      <div>
+        <input type="radio" id="dur1_5" name="duration" value="90">
+        <label for="dur1_5">1h 30min</label>
+      </div>
+      <div>
+        <input type="radio" id="dur2" name="duration" value="120">
+        <label for="dur2">2 hours</label>
+      </div>
+      <span style="font-size:12px; color:#888; margin-top:4px;">Default: 30min if not specified</span>
+    </div>
     <button id="createEvent">Create CxCall Event</button>
     <div id="status"></div>
   </div>
